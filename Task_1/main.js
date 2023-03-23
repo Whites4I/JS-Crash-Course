@@ -88,3 +88,41 @@ function calculationNumberFiles() {
     }
 }
 calculationNumberFiles();
+
+/*
+Additional practice
+1. Implement the kilometers to miles unit converter. The user inputs a value in km, and
+then the app displays this value in miles (1 km = 0,621371 miles). Use a constant here.
+*/
+
+function kilometersToMiles() {
+    const getKilometers = +prompt('Enter the value of kilometers that needs to be converted to miles:');
+    if (getKilometers !== 0) {
+        if (isFinite(getKilometers)) {
+            const valueMiles = getKilometers * 0.621371;
+            alert(`${getKilometers} kilometers equals ${valueMiles.toFixed(2)} miles.`);
+        } else {
+            alert('Invalid value');
+            kilometersToMiles();
+        }
+    }
+}
+kilometersToMiles();
+
+/*
+Additional practice
+2. Ask the user for the current time (hours, minutes). Calculate how many hours and minutes are left until the end of the day.
+*/
+
+function leftTime() {
+    const arrTime = prompt('Please enter the time in hh and mm separated by a comma (Example: 13,20):')?.split(',');
+    if (arrTime !== undefined) {
+        if (arrTime.every(value => isFinite(value)) && arrTime.length === 2) {
+            alert(`Time left until the end of the day: ${24 - arrTime[0]}:${60 - arrTime[1]}`);
+        } else {
+            alert('Invalid value');
+            leftTime();
+        }
+    }
+}
+leftTime();
