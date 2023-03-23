@@ -118,7 +118,7 @@ function leftTime() {
     const arrTime = prompt('Please enter the time in hh and mm separated by a comma (Example: 13,20):')?.split(',');
     if (arrTime !== undefined) {
         if (arrTime.every(value => isFinite(value)) && arrTime.length === 2) {
-            alert(`Time left until the end of the day: ${24 - arrTime[0]}:${60 - arrTime[1]}`);
+            alert(`Time left until the end of the day: ${23 - arrTime[0]}:${60 - arrTime[1]}`);
         } else {
             alert('Invalid value');
             leftTime();
