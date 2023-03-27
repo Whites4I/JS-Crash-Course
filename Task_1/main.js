@@ -126,3 +126,25 @@ function leftTime() {
     }
 }
 leftTime();
+
+/*
+Additional practice
+3.Ask the user for the 3-digit number and display it backwards. Try to use the % (division remainder) operator.
+*/
+
+function reverseNumber() {
+    const getArrNumber = prompt('Enter the three-digit number you want to reverse:')?.split('');
+    const newArr = [];
+    if (getArrNumber !== undefined) {
+        if (getArrNumber.every(value => isFinite(+value)) && getArrNumber.length === 3) {
+            for (let i = 0; i < getArrNumber.length; i++) {
+                newArr.unshift(getArrNumber[i]);
+            }
+            alert(`The result of the reversal: ${newArr.join('')}`);
+        } else {
+            alert('Invalid value');
+            reverseNumber();
+        }
+    }
+}
+reverseNumber();
