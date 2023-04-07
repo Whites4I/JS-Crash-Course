@@ -122,11 +122,11 @@ alert(Object.entries(oneVariable).slice(1));
 const weekDays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 
 let i = 0;
-let res;
+let res = 0;
 
 do {
     const weekDay = weekDays[i];
-    res = prompt(`${weekDay}. Do you want to see the next day?`);
+    res = prompt(`${weekDay}. Do you want to see the next day? (Write "OK")`);
     console.log(res)
     i++;
 
