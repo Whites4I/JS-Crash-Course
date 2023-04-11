@@ -55,3 +55,34 @@ addButton.addEventListener('click', () => time.addOneSecond());
 
 let subtractButton = document.getElementById('minusSecond');
 subtractButton.addEventListener('click', () => time.subtractOneSecond());
+
+
+// 2. Create an object that defines a car (manufacturer, model, year of manufacture, average speed) and write the following methods to work with this object.
+
+
+const car = {
+    manufacturer: "Toyota",
+    model: "Supra",
+    yearOfManufacture: "2020",
+    averageSpeed: "360",
+    // 2.1. To display information about the car on the screen.
+    displayInfo: function () {
+        console.log(`Manufacturer: ${this.manufacturer}`);
+        console.log(`Model: ${this.model}`);
+        console.log(`Year of Manufacture: ${this.yearOfManufacture}`);
+        console.log(`Average Speed: ${this.averageSpeed} km/h`);
+    },
+    // 2.2. To calculate the time required to cover a given distance at an average speed.
+    // !Keep in mind that after every 4 hours of travel, driver needs to take a 1-hour break.
+    calculateTravelTime: function (distance) {
+        const travelTime = distance / this.averageSpeed;
+        const breakTime = Math.floor(travelTime / 4);
+        const totalTime = travelTime + breakTime;
+        const hours = Math.floor(totalTime);
+        const minutes = Math.round((totalTime - hours) * 60);
+        console.log(`Time to travel ${distance} km: ${hours} hours and ${minutes} minutes`);
+    }
+};
+
+car.displayInfo();
+car.calculateTravelTime(500);
