@@ -3,7 +3,7 @@
 
 const timeNow = new Date()
 
-let time = {
+const time = {
     hours: timeNow.getHours(),
     minutes: timeNow.getMinutes(),
     seconds: timeNow.getSeconds(),
@@ -25,7 +25,7 @@ let time = {
                 this.hours += 1;
             }
         }
-        this.updateDisplay();
+        this.display();
     },
     //1.3. To substract one second from it
     subtractOneSecond() {
@@ -38,22 +38,22 @@ let time = {
                 this.hours -= 1;
             }
         }
-        this.updateDisplay();
+        this.display();
     },
 
-    updateDisplay() {
-        let timeDisplay = document.getElementById('clock');
+    display() {
+        const timeDisplay = document.getElementById('clock');
         timeDisplay.textContent = this.displayTime();
     }
-};
 
-let timeDisplay = document.getElementById('clock');
-timeDisplay.textContent = time.displayTime();
+}
 
-let addButton = document.getElementById('addSecond');
+time.display();
+
+const addButton = document.getElementById('addSecond');
 addButton.addEventListener('click', () => time.addOneSecond());
 
-let subtractButton = document.getElementById('minusSecond');
+const subtractButton = document.getElementById('minusSecond');
 subtractButton.addEventListener('click', () => time.subtractOneSecond());
 
 
@@ -63,8 +63,8 @@ subtractButton.addEventListener('click', () => time.subtractOneSecond());
 const car = {
     manufacturer: "Toyota",
     model: "Supra",
-    yearOfManufacture: "2020",
-    averageSpeed: "360",
+    yearOfManufacture: 2020,
+    averageSpeed: 360,
     // 2.1. To display information about the car on the screen.
     displayInfo: function () {
         console.log(`Manufacturer: ${this.manufacturer}`);
