@@ -6,3 +6,12 @@
 • метод для видалення стилю;
 • метод getCSS(), який повертає CSS код у вигляді рядка.
 */
+
+class CssClass {
+    constructor(name, style) {
+        this.name = name;
+        this.style = style;
+    }
+
+
+}
