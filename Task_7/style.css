@@ -1,0 +1,24 @@
+body {
+    padding: 22px;
+    margin-bottom: 35px;
+    background-color: #5f6361;
+}
+
+.overlay {
+    width: 80%;
+    min-width: 30%;
+    margin: 3% auto;
+    display: normal;
+    padding: 2%;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 40px;
+    height: auto;
+}
+
+h1 {
+    margin: 0;
+}
+
+h2 {
+    margin: 0;
+}

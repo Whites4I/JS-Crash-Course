@@ -1,7 +1,7 @@
 // 1. Create an object that defines a time (minutes, hours, seconds) and write the following methods:
 // 1.1 To display time in hh:mm:ss format
 
-const timeNow = new Date()
+const timeNow = new Date();
 
 const time = {
     hours: timeNow.getHours(),
