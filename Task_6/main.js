@@ -73,12 +73,15 @@ class Button extends CssClass {
 
     showBtn() {
         const getButtonId = document.getElementById('button');
-        getButtonId.innerHTML = `<button style="${this.getCSS}">${this.nameButton}</button>`;
+        getButtonId.innerHTML =
+            `<div id = "${this.nameCss}">
+        <button style="${this.getCSS}">${this.nameButton}</button>
+        </div>`;
         // document.write(`<button style="${this.getCSS}">${this.nameButton}</button>`);
     }
 }
 
-const buttonWrite = new Button(100, 50, 'button', 'ClickOnMe');
+const buttonWrite = new Button(100, 50, '1button', 'ClickOnMe');
 buttonWrite.showBtn();
 
 class BootstrapButton extends Button {
