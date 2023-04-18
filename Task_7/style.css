@@ -22,3 +22,21 @@ h1 {
 h2 {
     margin: 0;
 }
+
+h3 {
+    padding-left: 15px;
+}
+
+h4 {
+    padding-top: 200px;
+    padding-left: 170px;
+}
+
+.card {
+    border-radius: 40px;
+    border-color: brown;
+    width: 200px;
+    height: 300px;
+    border-style: double;
+    display: inline-block;
+}
