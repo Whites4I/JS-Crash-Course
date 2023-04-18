@@ -1,7 +1,7 @@
 // 1. Розробити сторінку, яка буде відображати поточний час, оновлюючи його кожної секунди. Дизайн на ваш розсуд.
 
 setInterval(
-    function clock() {
+    function () {
         const timeNow = new Date();
 
         const time = {
@@ -29,12 +29,14 @@ setInterval(
 
 function playCards(player, numberCards) {
     const cards = ['6', '7', '8', '9', '10', 'J', 'Q', 'K', 'T'];
+    const suit = ['♠', '♥', '♦', '♣'];
     const cardId = document.getElementById(player);
     for (let i = 1; i <= numberCards; i++) {
         const card = document.createElement('div');
-        const cardSuit = cards[(Math.floor(Math.random() * cards.length))];
+        const cardRank = cards[(Math.floor(Math.random() * cards.length))];
+        const cardSuit = suit[(Math.floor(Math.random() * suit.length))];
         card.className = 'card';
-        card.innerHTML = `<h3>${cardSuit}</h3><h4>${cardSuit}</h4>`;
+        card.innerHTML = `<h3>${cardRank + cardSuit}</h3><h4>${cardRank + cardSuit}</h4>`;
         cardId.appendChild(card);
     }
     console.log(cardId);
