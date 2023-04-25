@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Task_8</title>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand">AbobaCar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://github.com/Whites4I">Link to Git</a>
+                    </li>
+                    <div class="hstack gap-3">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Dropdown
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                        <div class="vr"></div>
+                        <li>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" role="switch"
+                                    id="flexSwitchCheckDefault">
+                                <label class="form-check-label" for="flexSwitchCheckDefault">Dark mode</label>
+                            </div>
+                        </li>
+                    </div>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <form class="was-validated">
+            <h3>Create new declaration</h3>
+            <div class="mb-3">
+                <label for="validationTextarea" class="form-label">Model car</label>
+                <textarea class="form-control" id="validationTextarea" placeholder="Daewoo Matiz" required></textarea>
+                <div class="invalid-feedback">
+                    Please enter a model car in the textarea.
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="validationTextarea" class="form-label">Year of manufacture</label>
+                <input type="number" min="1900" max="2099" step="1" value="" class="form-control"
+                    id="validationTextarea" placeholder="2023" required></input>
+                <div class="invalid-feedback">
+                    Please enter a year of manufacture in the textarea.
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="validationTextarea" class="form-label">Price</label>
+                <textarea class="form-control" id="validationTextarea" placeholder="20000" required></textarea>
+                <div class="invalid-feedback">
+                    Please enter a price in the textarea.
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="validationTextarea" class="form-label">Color</label>
+                <textarea class="form-control" id="validationTextarea" placeholder="Yellow" required></textarea>
+                <div class="invalid-feedback">
+                    Please enter a color in the textarea.
+                </div>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                    Is the car cleared?
+                </label>
+            </div>
+            <div class="mb-3 ">
+                <button class="btn btn-primary " type="submit">Submit form</button>
+            </div>
+        </form>
+
+        <table class="table table-striped table-bordered w-100">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">First</th>
+                    <th scope="col">Last</th>
+                    <th scope="col">Handle</th>
+                </tr>
+            </thead>
+            <tbody class="table-group-divider ">
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td colspan="2">Larry the Bird</td>
+                    <td>@twitter</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+    <script type="module" src="main.js" defer></script>
+</body>
+
+</html>
