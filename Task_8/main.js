@@ -53,3 +53,4 @@ const TableCars = {
 
 const buttonForm = document.getElementById("buttonForm");
 buttonForm.addEventListener("click", event => { event.preventDefault(); TableCars.addCarToTable() })
+//
