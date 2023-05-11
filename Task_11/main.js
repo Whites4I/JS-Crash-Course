@@ -43,7 +43,7 @@ const productsCards = {
                     this.addCards(products);
                 });
             });
-        this.skip += 9;
+        this.skip += this.limit;
     },
 
     addCards(products) {
